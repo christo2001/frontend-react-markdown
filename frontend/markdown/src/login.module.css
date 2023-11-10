@@ -20,7 +20,7 @@
 }
 
 .errormessage {
-    color: red;
+    color: rgb(0, 183, 255);
     /* Add any additional styling you want for the error message */
   }
 
@@ -104,6 +104,13 @@ form{
     font-weight: 600;
     margin: 10px 0;
     transition: .5s;
+}
+
+.forgetbtn{
+    margin-top: 20px;
+    text-decoration: none;
+    color: skyblue;
+    font-weight: 600;
 }
 
 .loginpanelscontainer{

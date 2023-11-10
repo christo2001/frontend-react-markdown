@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import otpcss from './otp.module.css';
+import { useNavigate } from 'react-router-dom';
 
 function VerifyOTP() {
+  const navigate = useNavigate()
   const [email, setEmail] = useState('');
   const [otpFields, setOtpFields] = useState(['', '', '', '']); // An array to store OTP values
   const [message, setMessage] = useState('');
@@ -23,6 +25,10 @@ function VerifyOTP() {
       });
   
       if (response.status === 200) {
+        // Display the message for a few seconds and then navigate to "otp"
+      setTimeout(() => {
+        navigate('/change');
+      }, 2000); // Adjust the delay (in milliseconds) as needed
         setMessage(response.data.message);
       } else {
         setError(response.data.error);

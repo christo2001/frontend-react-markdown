@@ -5,6 +5,15 @@
     min-height: 100vh;
 }
 
+.topic{
+    font-family: 'Kenia', sans-serif;
+    text-transform: capitalize;
+    color: rgb(255, 94, 0);
+    position: relative;
+    left: 40px;
+    text-decoration: line-through;
+}
+
 .advantagehead{
     text-align: center;
     text-transform: capitalize;

@@ -2,7 +2,7 @@ import React from 'react';
 import footercss from './footer.module.css';
 import { BrowserRouter as Router, Routes, Route, NavLink, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faApple,faFacebook,faLinkedin,faTwitter,faInstagram } from '@fortawesome/free-brands-svg-icons'; // Import the Apple icon
+import {faFacebook,faLinkedin,faTwitter,faInstagram } from '@fortawesome/free-brands-svg-icons'; // Import the Apple icon
 
 function Footers() {
   return (
@@ -34,14 +34,12 @@ function Footers() {
             </div>
 
             <div className={footercss.footcol}>
-              <h4>online shop</h4>
-              <ul>
-                <li><a href='#'> watch</a></li>
-                <li><a href='#'>bag</a></li>
-                <li><a href='#'>shoes</a></li>
-                <li><a href='#'>dress</a></li>
-              </ul>
-            </div>
+  <h4>Subscribe to our Newsletter</h4>
+  <p>Stay updated with our latest offers and products by subscribing to our newsletter.</p>
+  <input type="email" placeholder="Your Email Address" />
+  <button>Subscribe</button>
+</div>
+
 
             <div className={footercss.footcol}>
               <h4>follow us</h4>

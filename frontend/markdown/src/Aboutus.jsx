@@ -16,8 +16,13 @@ function Aboutus() {
 
   return (
     <div>
-      <div id='about'></div>
+      {/* using this id "about" helps us to navigate to the respective page when i click the "about" word in the navbar */}
+      <div id='about'>
+      <h1 className={aboutcss.topic}>about us</h1>
+      </div>
       <div className={aboutcss.aboutbody} data-aos="fade-up">
+
+
 
         {/* first two cards start */}
         <div className={aboutcss.aboutcard}>
@@ -49,6 +54,9 @@ function Aboutus() {
           </div>
         </div>
          {/* first two cards end*/}
+
+
+
 
          <div className={aboutcss.aboutcards}>
           <div className={aboutcss.aboutcards1}>

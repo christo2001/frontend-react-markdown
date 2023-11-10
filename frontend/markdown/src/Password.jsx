@@ -2,10 +2,13 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import img2 from '../images/image3.png';
 import passwordcss from './password.module.css';
+import { useNavigate } from 'react-router-dom';
 
 function Password() {
+  const navigate = useNavigate()
   const [email, setEmail] = useState('');
   const [newpassword, setNewPassword] = useState('');
+  const [message, setMessage] = useState('');
 
   const handleChange = (e) => {
     if (e.target.name === 'email') {
@@ -17,17 +20,24 @@ function Password() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     try {
       const response = await axios.post('http://localhost:3000/api/user/changepassword', {
         email: email,
         newpassword: newpassword
       });
-      console.log("success", response.data);
+  
+      // Password change was successful
+      setMessage('Password changed successfully.');
+      setTimeout(() => {
+        navigate('/login');
+      }, 2000);
     } catch (error) {
-      console.error(error);
+      // An error occurred during the password change
+      setMessage('An error occurred while changing the password. Please try again.');
     }
   };
+  
 
   return (
     <div className={passwordcss.body}>
@@ -75,6 +85,9 @@ function Password() {
             </div>
 
             <button type='submit' className={passwordcss.submits}>submit</button>
+
+            {message && <p className={passwordcss.message}>{message}</p>}
+
 
 
           </form>

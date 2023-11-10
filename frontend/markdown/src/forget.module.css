@@ -60,9 +60,14 @@
     margin-bottom: 20px;
 }
 
-.forgetbutton{
+.forgetbutton {
     border-radius: 0;
-    margin-top: 20px;
+    margin-top: 40px;
+    font-size: medium;
+    background: transparent;
+    border: 1px solid #00dfc4;
+    color:#fff;
+    text-transform: capitalize;
 }
 
 .message{

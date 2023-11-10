@@ -3,6 +3,17 @@
     gap: 10px;
 }
 
+.topic{
+    font-family: 'Kenia', sans-serif;
+    text-transform: capitalize;
+    color: rgb(255, 94, 0);
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    left: 40px;
+    text-decoration: line-through;
+}
+
 .abouthead h1{
     font-size: 30px;
     text-transform: capitalize;

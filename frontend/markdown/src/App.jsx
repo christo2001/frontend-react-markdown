@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 import { BrowserRouter as Router, Routes, Route, NavLink, BrowserRouter } from 'react-router-dom';
-import Home from './Home';
+import Home from './Register';
 import Login from './Login';
 import Forget from './Forget';
 import Otp from './Otp';

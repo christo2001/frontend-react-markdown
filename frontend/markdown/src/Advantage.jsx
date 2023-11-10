@@ -23,8 +23,13 @@ function Advantage() {
 
   return (
    <div>
-   <div id='adv'></div>
-   <div className={advantagecss.body}  data-aos="fade-up"  id='adv'>
+      {/* using this id "adv" helps us to navigate to the respective page when i click the "uses" word in the navbar */}
+   <div id='adv'> 
+      <h1 className={advantagecss.topic}>uses</h1>
+   </div>
+
+   {/* advantages of markdown using grid  */}
+   <div className={advantagecss.body}  data-aos="fade-up">
         <div className={advantagecss.container}>
            <div className={advantagecss.box}>
             <div className={advantagecss.content}>

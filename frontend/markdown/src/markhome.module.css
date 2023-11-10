@@ -2,6 +2,25 @@
   background: radial-gradient(50.53% 50.53% at 50.23% 49.47%, #414d59 0%, #1d2631 100%);
 }
 
+.loaderContainer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(7, 7, 7, 0.968); /* Semi-transparent white background */
+}
+
+.loaderContainer p{
+  margin-top: 20px;
+  color: #fff;
+  font-weight: 700;
+  font-size: large;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 
 .about{
   height: 100vh;
