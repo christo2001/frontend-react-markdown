@@ -34,11 +34,11 @@ function Footers() {
             </div>
 
             <div className={footercss.footcol}>
-  <h4>Subscribe to our Newsletter</h4>
-  <p>Stay updated with our latest offers and products by subscribing to our newsletter.</p>
-  <input type="email" placeholder="Your Email Address" />
-  <button>Subscribe</button>
-</div>
+                <h4>Subscribe to our website</h4>
+                <p>Stay updated with our latest offers and products by subscribing to our newsletter.</p>
+                <input type="email" placeholder="Your Email Address" />
+                <button>Subscribe</button>
+            </div>
 
 
             <div className={footercss.footcol}>
