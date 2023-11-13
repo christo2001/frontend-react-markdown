@@ -8,6 +8,10 @@
     width: 100%;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 .textarea textarea{
     background-color: rgb(183, 185, 185);
     width: 900px;
