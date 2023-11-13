@@ -30,7 +30,7 @@
 
 /* custom scfoll bar for textarea */
 body{
-    overflow-X: hidden;
+    overflow-x: hidden;
 }
 body::-webkit-scrollbar {
     width: 15px;
