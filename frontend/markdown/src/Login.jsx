@@ -97,7 +97,7 @@ function Login() {
           </form>
 
           {console.log('Rendering error message block:', message)}
-          {message && <p style={{ color: 'red', textAlign:'center' }}>{message}</p>}
+          {message && <p style={{ color: 'skyblue', textAlign:'center' }}>{message}</p>}
         </div>
       </div>
 

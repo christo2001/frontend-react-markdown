@@ -117,7 +117,7 @@ function Signup() {
               </div>
 
               <input type='submit' className={signupcss.signupbtnsolid} />
-              {message && <p style={{ color: 'red' }}>{message}</p>} {/* Display the message */}
+              {message && <p style={{ color: 'skyblue' }}>{message}</p>} {/* Display the message */}
 
             </form>
           </div>
