@@ -29,36 +29,24 @@
 }
 
 /* custom scfoll bar for textarea */
-
-.textarea textarea::-webkit-scrollbar {
+body{
+    overflow-X: hidden;
+}
+body::-webkit-scrollbar {
     width: 15px;
 }
 
-.textarea textarea::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb {
     background: linear-gradient(#642bff, #ff22e6);
     border-radius: 10px;
+    overflow-y: hidden;
 }
 
 
-.textarea textarea::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track {
     background-color: #d1e5ff;
 }
 
-/* custom scfoll bar for markdown */
-
-.markdownarea::-webkit-scrollbar {
-    width: 15px;
-}
-
-.markdownarea::-webkit-scrollbar-thumb {
-    background: linear-gradient(#642bff, #ff22e6);
-    border-radius: 10px;
-}
-
-
-.markdownarea::-webkit-scrollbar-track {
-    background-color: #d1e5ff;
-}
 
 @media (max-width: 1200px) {
     .body {
