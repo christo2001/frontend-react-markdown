@@ -13,7 +13,7 @@ const Verification = ({ token }) => {
   useEffect(() => {
     if (token) {
       // Send a GET request to the Express route for user activation
-      fetch(`http://localhost:3000/api/user/verify/${token}`)
+      fetch(`https://url-shortener-pn6r.onrender.com/api/user/verify/${token}`)
         .then((response) => response.json())
         .then((data) => {
           if (data.message) {
