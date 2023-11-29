@@ -16,7 +16,6 @@ const Verification = ({ token }) => {
           setVerificationStatus(data.message || 'User successfully verified!');
         } else {
           setVerificationStatus(data.error || 'Verification failed.');
-          navigate('/register');
         }
       } catch (error) {
         console.error('Error during verification:', error);
@@ -29,6 +28,7 @@ const Verification = ({ token }) => {
 
   return (
     <div className={verifycss.verifybox}>
+      <h1>hello</h1>
       {verificationStatus ? (
         <>
           <p className={verifycss.verifymessage}>{verificationStatus}</p>
