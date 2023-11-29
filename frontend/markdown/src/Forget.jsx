@@ -21,7 +21,7 @@ function Forget() {
     e.preventDefault();
   
     try {
-      const response = await axios.post('https://url-shortener-pn6r.onrender.com/api/user/forgetpassword', forgetformdata);
+      const response = await axios.post('https://capstone-t11c.onrender.com/api/user/forgetpassword', forgetformdata);
       console.log('Success:', response.data); // Log the response data
       setmessage('An OTP sent successfully to your Email Address.'); // Set a success message
   

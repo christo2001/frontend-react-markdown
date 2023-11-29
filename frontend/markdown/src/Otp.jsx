@@ -19,7 +19,7 @@ function VerifyOTP() {
     e.preventDefault(); // Corrected typo
   
     try {
-      const response = await axios.post('https://url-shortener-pn6r.onrender.com/api/user/verifyotp', {
+      const response = await axios.post('https://capstone-t11c.onrender.com/api/user/verifyotp', {
         email,
         otp: otpFields.join(''), // Join the OTP fields into a single string
       });
