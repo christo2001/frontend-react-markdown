@@ -28,7 +28,6 @@ const Verification = ({ token }) => {
 
   return (
     <div className={verifycss.verifybox}>
-      <h1>hello</h1>
       {verificationStatus ? (
         <>
           <p className={verifycss.verifymessage}>{verificationStatus}</p>
