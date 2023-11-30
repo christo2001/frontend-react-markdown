@@ -43,7 +43,7 @@ const Verification = ({ token }) => {
                 <p>
                   If you haven't received the activation email, you can{' '}
                   {resendLink && (
-                    <Link to={resendLink} className={verifycss.resendLink}>
+                    <Link to="/resend" className={verifycss.resendLink}>
                       Resend Activation
                     </Link>
                   )}
