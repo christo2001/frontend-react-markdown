@@ -14,7 +14,7 @@ import Aboutus from './Aboutus';
 import Barchart from './componenets/Barchart';
 import Nav from './Nav';
 import Cheatsheet from './Cheatsheet';
-import Resend from './Resend';
+
 
 function App() {
   const user = localStorage.getItem("token");
@@ -35,7 +35,7 @@ function App() {
             <Route path='/about' element={<Aboutus/>} />
             <Route path='/nav' element={<Nav/>} />
             <Route path='/cheatsheet' element={<Cheatsheet/>} />
-            <Route path='/resend' element={<Resend/>} />
+           
 
           </Routes>
     </BrowserRouter>
