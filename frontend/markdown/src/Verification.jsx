@@ -37,13 +37,15 @@ const Verification = ({ token }) => {
             </Link>
           )}
           {verificationStatus === 'Verification failed.' && (
-            <p>
-              If you haven't received the activation email, you can{' '}
-              <Link to="/resendactivation" className={verifycss.resendLink}>
-                Resend Activation
-              </Link>
-              .
-            </p>
+            <>
+              <p>
+                If you haven't received the activation email, you can{' '}
+                <Link to="/resendactivation" className={verifycss.resendLink}>
+                  Resend Activation
+                </Link>
+                .
+              </p>
+            </>
           )}
         </>
       ) : (
@@ -54,4 +56,3 @@ const Verification = ({ token }) => {
 };
 
 export default Verification;
-
