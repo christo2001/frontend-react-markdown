@@ -51,8 +51,8 @@ const ResendActivation = () => {
             Submit
           </button>
         </form>
+        {message && <p className={resendcss.message}>{message}</p>}
       </div>
-      {message && <p>{message}</p>}
     </div>
   );
 };
