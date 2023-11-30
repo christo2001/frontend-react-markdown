@@ -38,19 +38,19 @@ const Verification = ({ token }) => {
               Go to Login
             </Link>
           )}
-          {verificationStatus === 'Verification failed.' && (
-            <>
-              <p>
-                If you haven't received the activation email, you can{' '}
-                {resendLink && (
-                  <Link to={resendLink} className={verifycss.resendLink}>
-                    Resend Activation
-                  </Link>
-                )}
-                {!resendLink && <span>contact support for assistance</span>}.
-              </p>
-            </>
-          )}
+         {(verificationStatus === 'Verification failed.' || verificationStatus === 'Invalid or already verified token') && (
+              <>
+                <p>
+                  If you haven't received the activation email, you can{' '}
+                  {resendLink && (
+                    <Link to={resendLink} className={verifycss.resendLink}>
+                      Resend Activation
+                    </Link>
+                  )}
+                  {!resendLink && <span>contact support for assistance</span>}.
+                </p>
+              </>
+            )}
         </>
       ) : (
         <p>Verifying user...</p>
