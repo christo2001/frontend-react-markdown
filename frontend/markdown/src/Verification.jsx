@@ -4,7 +4,6 @@ import verifycss from './verify.module.css';
 
 const Verification = ({ token }) => {
   const [verificationStatus, setVerificationStatus] = useState(null);
-  const [resendLink, setResendLink] = useState(null);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -17,7 +16,6 @@ const Verification = ({ token }) => {
           setVerificationStatus(data.message || 'User successfully verified!');
         } else {
           setVerificationStatus(data.error || 'Verification failed.');
-          setResendLink(data.resendLink || null);
         }
       } catch (error) {
         console.error('Error during verification:', error);
@@ -33,24 +31,7 @@ const Verification = ({ token }) => {
       {verificationStatus ? (
         <>
           <p className={verifycss.verifymessage}>{verificationStatus}</p>
-          {verificationStatus === 'User successfully verified!' && (
-            <Link to="/login" className={verifycss.verifybutton}>
-              Go to Login
-            </Link>
-          )}
-         {(verificationStatus === 'Verification failed.' || verificationStatus === 'Invalid or already verified token') && (
-              <>
-                <p>
-                  If you haven't received the activation email, you can{' '}
-                  {resendLink && (
-                    <Link to="/resend" className={verifycss.resendLink}>
-                      Resend Activation
-                    </Link>
-                  )}
-                  {!resendLink && <span>contact support for assistance</span>}.
-                </p>
-              </>
-            )}
+          {verificationStatus === 'User successfully verified!' && <Link to="/login" className={verifycss.verifybutton}>Go to Login</Link>}
         </>
       ) : (
         <p>Verifying user...</p>
