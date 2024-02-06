@@ -23,7 +23,7 @@ function Login() {
     e.preventDefault();
   
     try {
-      const response = await axios.post('https://capstone-t11c.onrender.com/api/user/login', formdata);
+      const response = await axios.post('http://localhost:5173/api/user/login', formdata);
       const token = response.data.token;
   
       // Store the token in localStorage
