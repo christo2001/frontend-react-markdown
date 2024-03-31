@@ -22,7 +22,7 @@ function Password() {
     e.preventDefault();
   
     try {
-      const response = await axios.post('https://capstone-t11c.onrender.com/api/user/changepassword', {
+      const response = await axios.post('localhost:3000/api/user/changepassword', {
         email: email,
         newpassword: newpassword
       });
