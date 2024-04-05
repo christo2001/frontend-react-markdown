@@ -22,7 +22,7 @@ function Password() {
     e.preventDefault();
   
     try {
-      const response = await axios.post('localhost:3000/api/user/changepassword', {
+      const response = await axios.post('http://localhost:3000/api/user/changepassword', {
         email: email,
         newpassword: newpassword
       });

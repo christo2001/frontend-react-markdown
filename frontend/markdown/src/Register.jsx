@@ -6,12 +6,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faLock, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { Link } from 'react-router-dom';
 import HashLoader from "react-spinners/HashLoader";
+import { useNavigate} from 'react-router-dom';
 
 
 
 function Signup() {
 
       // loader page code //
+      const navigate = useNavigate()
 
   const [loading,setloading] = useState(false)
 
@@ -40,13 +42,14 @@ function Signup() {
     e.preventDefault();
 
     try {
-      const response = await axios.post('localhost:3000/api/user/registered', signupformdata);
+      const response = await axios.post('http://localhost:3000/api/user/registered', signupformdata);
       const token = response.data.token;
 
       // Store the token in localStorage
       localStorage.setItem('token', token);
 
       setmessage("Registration successful, An Email set your Registerd Email address"); // Set success message
+      navigate('/login')
     } catch (error) {
       const errorMessage = error.response ? error.response.data.error : 'An error occurred';
       setmessage(errorMessage); // Set error message

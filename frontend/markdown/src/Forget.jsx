@@ -21,7 +21,7 @@ function Forget() {
     e.preventDefault();
   
     try {
-      const response = await axios.post('localhost:3000/api/user/forgetpassword', forgetformdata);
+      const response = await axios.post('http://localhost:3000/api/user/forgetpassword', forgetformdata);
       console.log('Success:', response.data); // Log the response data
       setmessage('An OTP sent successfully to your Email Address.'); // Set a success message
   
