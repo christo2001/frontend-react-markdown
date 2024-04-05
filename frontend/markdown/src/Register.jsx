@@ -42,7 +42,7 @@ function Signup() {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:3000/api/user/registered', signupformdata);
+      const response = await axios.post('https://backend-react-markdown-8eal.onrender.com/api/user/registered', signupformdata);
       const token = response.data.token;
 
       // Store the token in localStorage
